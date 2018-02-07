@@ -125,12 +125,13 @@ ex. `python3 /home/pi/yourPiProject/post_pi_status.py`
 ## Other info
 
 ### Google documentation
-https://developers.google.com/sheets/api/
-https://developers.google.com/sheets/api/quickstart/python
-https://console.developers.google.com/start/api?id=sheets.googleapis.com
+[Google Sheets API](https://developers.google.com/sheets/api/)
+[Python Quickstart](https://developers.google.com/sheets/api/quickstart/python)
 
-### gpiozero documentation
-https://gpiozero.readthedocs.io/en/stable/installing.html#installing-gpio-zero
+### [raspberry pi projects](https://projects.raspberrypi.org)
+
+### [gpiozero](https://gpiozero.readthedocs.io/en/stable/)
+[MotionSensor](https://gpiozero.readthedocs.io/en/stable/api_input.html#motion-sensor-d-sun-pir)
 
 ### Scheduling with `cron`
 Once everything is working as desired you can schedule your script to run automatically.
