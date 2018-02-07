@@ -69,7 +69,7 @@ def main():
     ]
         
     
-    spreadsheetId = '1SpW44RSzx5zFnnSJgH_H_w4e788FNxTfANffqdqNUAE'
+    spreadsheetId = 'YOUR_SHEET_ID_HERE'
     rangeName = 'Sheet1!A1:C1'
     inputOption = 'RAW'
     body = { 'values' : values }
