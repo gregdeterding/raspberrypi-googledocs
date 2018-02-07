@@ -151,5 +151,7 @@ Once everything is working as desired you can schedule your script to run automa
 ` * * * * * python3 /home/pi/yourPiProject/post_pi_status.py`
 
 For more resources on `cron` and `crontab`:
+
 https://www.raspberrypi.org/documentation/linux/usage/cron.md
+
 https://tecadmin.net/crontab-in-linux-with-20-examples-of-cron-schedule/#
