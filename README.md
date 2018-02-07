@@ -117,7 +117,7 @@ ex. `https://docs.google.com/spreadsheets/d/THIS_PART_IS_YOUR_SHEET_ID/edit`
 8. Make sure your are signed in to Google on your Raspberry Pi browser.
 9. Save and run your python script.
 ex. `python3 /home/pi/yourPiProject/post_pi_status.py`
-- The first run will trigger the permission request in the browser. 
+note: The first run will trigger the permission request in the browser. 
 10. After granting access, run the script again and verify a row has been added to your sheet. 
 
 
@@ -136,12 +136,18 @@ ex. `python3 /home/pi/yourPiProject/post_pi_status.py`
 
 ## Scheduling with `cron`
 Once everything is working as desired you can schedule your script to run automatically.
-$ `crontab -e`
-- To run your script every hour add this line:
+
+`crontab -e`
+
+- To run your script every hour add this line
+
 ` 0 * * * * python3 /home/pi/yourPiProject/post_pi_status.py`
 
-- To edit your cron settings run `crontab -l`
-- To run your script every hour minute change the line to:
+- To edit your cron settings run 
+
+`crontab -l`
+- To run your script every hour minute change the line to
+
 ` * * * * * python3 /home/pi/yourPiProject/post_pi_status.py`
 
 For more resources on `cron` and `crontab`:
