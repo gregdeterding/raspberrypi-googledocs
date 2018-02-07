@@ -4,7 +4,7 @@ This guide will cover the basic steps to record sensor data from a Raspberry Pi 
 
 ### What you need
 - A Raspberry Pi running raspbian
-- A sensor properly wired to the raspi via GPIO pins (this sample uses a PIR Motion sensor)
+- A sensor properly wired to the raspi via GPIO pins (this sample assumes a PIR Motion sensor is connected to GPIO4)
 - A Google account
 - A Google Spreadsheet for recording the pi data
 
@@ -133,6 +133,15 @@ https://console.developers.google.com/start/api?id=sheets.googleapis.com
 https://gpiozero.readthedocs.io/en/stable/installing.html#installing-gpio-zero
 
 ### Scheduling with `cron`
-https://www.raspberrypi.org/documentation/linux/usage/cron.md
+Once everything is working as desired you can schedule your script to run automatically.
+$ `crontab -e`
+- To run your script every hour add this line:
+` 0 * * * * python3 /home/pi/yourPiProject/post_pi_status.py`
 
+- To edit your cron settings run `crontab -l`
+- To run your script every hour minute change the line to:
+` * * * * * python3 /home/pi/yourPiProject/post_pi_status.py`
+
+For more resources on `cron` and `crontab`:
+https://www.raspberrypi.org/documentation/linux/usage/cron.md
 https://tecadmin.net/crontab-in-linux-with-20-examples-of-cron-schedule/#
