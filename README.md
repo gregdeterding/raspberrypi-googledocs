@@ -146,7 +146,7 @@ Once everything is working as desired you can schedule your script to run automa
 - To edit your cron settings run 
 
 `crontab -l`
-- To run your script every hour minute change the line to
+- To run your script every minute change the line to
 
 ` * * * * * python3 /home/pi/yourPiProject/post_pi_status.py`
 
