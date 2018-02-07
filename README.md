@@ -121,19 +121,20 @@ ex. `python3 /home/pi/yourPiProject/post_pi_status.py`
 10. After granting access, run the script again and verify a row has been added to your sheet. 
 
 
-
 ## Other info
 
-### Google documentation
-[Google Sheets API](https://developers.google.com/sheets/api/)
-[Python Quickstart](https://developers.google.com/sheets/api/quickstart/python)
+### [Google Sheets API](https://developers.google.com/sheets/api/)
+
+### [Sheets API Python Quickstart](https://developers.google.com/sheets/api/quickstart/python)
 
 ### [raspberry pi projects](https://projects.raspberrypi.org)
 
 ### [gpiozero](https://gpiozero.readthedocs.io/en/stable/)
-[MotionSensor](https://gpiozero.readthedocs.io/en/stable/api_input.html#motion-sensor-d-sun-pir)
 
-### Scheduling with `cron`
+### [gpiozero MotionSensor](https://gpiozero.readthedocs.io/en/stable/api_input.html#motion-sensor-d-sun-pir)
+
+
+## Scheduling with `cron`
 Once everything is working as desired you can schedule your script to run automatically.
 $ `crontab -e`
 - To run your script every hour add this line:
@@ -144,5 +145,7 @@ $ `crontab -e`
 ` * * * * * python3 /home/pi/yourPiProject/post_pi_status.py`
 
 For more resources on `cron` and `crontab`:
+
 https://www.raspberrypi.org/documentation/linux/usage/cron.md
+
 https://tecadmin.net/crontab-in-linux-with-20-examples-of-cron-schedule/#
