@@ -134,4 +134,5 @@ https://gpiozero.readthedocs.io/en/stable/installing.html#installing-gpio-zero
 
 ### Scheduling with `cron`
 https://www.raspberrypi.org/documentation/linux/usage/cron.md
+
 https://tecadmin.net/crontab-in-linux-with-20-examples-of-cron-schedule/#
