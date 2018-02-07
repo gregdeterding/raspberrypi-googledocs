@@ -1,24 +1,3 @@
-## Raspberry Pi and Google Docs
-
-This guide will cover the basic steps to record sensor data from a Raspberry Pi in a Google Spreadsheet using the Google Sheets API.
-
-### What you need
-- A Raspberry Pi running raspbian
-- A sensor properly wired to the raspi via GPIO pins (this sample uses a PIR Motion sensor)
-- A Google account
-- A Google Spreadsheet for recording the pi data
-
-
-### Basic steps
-1. Follow steps 1 and 2 (3 is optional) from [this guide](https://developers.google.com/sheets/api/quickstart/python) to enable the Google Sheets API for your project.
-2. Create a new directory for your project on your raspberry pi.
-ex. `mkdir /home/pi/yourPiProject`
-3. Move the `client_secret.json` from step 1 (step 1) to your project directory.
-4. Use your method of choice to create a new python script in your project directory. 
-ex. `post_pi_status.py`
-5. Copy this sample code into your python file (this is a sample from [Google Sheets API docs](https://developers.google.com/sheets/api/quickstart/python) with minor adjustments for the sensor data and request payload).
-
-```
 import httplib2
 import os
 
@@ -90,7 +69,7 @@ def main():
     ]
         
     
-    spreadsheetId = 'YOUR_SHEET_ID_HERE'
+    spreadsheetId = '1SpW44RSzx5zFnnSJgH_H_w4e788FNxTfANffqdqNUAE'
     rangeName = 'Sheet1!A1:C1'
     inputOption = 'RAW'
     body = { 'values' : values }
@@ -108,30 +87,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-```
-
-6. Get the ID of your Google Spreadsheet 
-ex. `https://docs.google.com/spreadsheets/d/THIS_PART_IS_YOUR_SHEET_ID/edit`
-7. Replace `YOUR_SHEET_ID_HERE` with your sheet id.
-8. Make sure your are signed in to Google on your Raspberry Pi browser.
-9. Save and run your python script.
-ex. `python3 /home/pi/yourPiProject/post_pi_status.py`
-- The first run will trigger the permission request in the browser. 
-10. After granting access, run the script again and verify a row has been added to your sheet. 
-
-
-
-## Other info
-
-### Google documentation
-https://developers.google.com/sheets/api/
-https://developers.google.com/sheets/api/quickstart/python
-https://console.developers.google.com/start/api?id=sheets.googleapis.com
-
-### gpiozero documentation
-https://gpiozero.readthedocs.io/en/stable/installing.html#installing-gpio-zero
-
-### Scheduling with `cron`
-https://www.raspberrypi.org/documentation/linux/usage/cron.md
-https://tecadmin.net/crontab-in-linux-with-20-examples-of-cron-schedule/#
